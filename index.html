@@ -7,6 +7,18 @@
 <body>
     <a href="/demotest/universe.html">universe</a>
     <h1>DemoTest</h1>
-    <p>hello world</p>
+    <p>hello  <span id="name"></span></p>
+
+    <script>
+        // Get the query parameter 'text' from the URL
+        const params = new URLSearchParams(window.location.search);
+        const name = params.get('text');
+
+        // Check if the 'text' parameter exists and is not empty
+        if (name) {
+            // Display "hello" followed by the name in the 'name' span
+            document.getElementById('name').textContent = name;
+        }
+    </script>
 </body>
 </html>
