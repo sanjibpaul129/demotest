@@ -12,58 +12,57 @@
             <img src=".../image/face.jpg" alt="Header Image" class="img-fluid">
         </div>
         <form>
-            <div class="form-group">
+            <div>
                 <label for="name">Name:</label> <span id="name"></span>
-
-            <div class="form-group">
+            <div>
                 <label for="dob">Date of Birth:</label>
             </div>
-            <div class="form-group">
+            <div>
                 <label for="address">Address:</label>
             </div>
-            <div class="form-group">
+            <div>
                 <label for="contactNo">Contact No:</label>
             </div>
-            <div class="form-group">
+            <div>
                 <label for="email">Email Id:</label>
             </div>
-            <div class="form-group">
+            <div>
                 <label for="bloodGroup">Blood Group:</label>
             </div>
-            <div class="form-group">
+            <div>
                 <label for="spouseName">Name of Spouse:</label>
             </div>
-            <div class="form-group">
+            <div>
                 <label for="spouseContact">Spouse Contact No:</label>
             </div>
-            <div class="form-group">
+            <div>
                 <label for="emergencyContact">Emergency Contact:</label>
             </div>
-            <div class="form-group">
+            <div>
                 <label for="livingWith">Living With:</label>
             </div>
-            <div class="form-group">
+            <div>
                 <label for="medicalHistory">Medical History:</label>
             </div>
-            <div class="form-group">
+            <div>
                 <label for="allergies">Allergies to Medicines:</label>
             </div>
-            <div class="form-group">
+            <div>
                 <label for="allergyPhysician">Allergy Physician (name & No):</label>
             </div>
-            <div class="form-group">
+            <div>
                 <label for="medicalInsurance">Medical Insurance:</label>
             </div>
-            <div class="form-group">
-                <label for="childName">Child’s Name:</label>
+            <div>
+                <label for="childName">Child's Name:</label>
             </div>
-            <div class="form-group">
-                <label for="childEmail">Child’s Email Id:</label>
+            <div>
+                <label for="childEmail">Child's Email Id:</label>
             </div>
-            <div class="form-group">
-                <label for="childContact">Child’s Contact No:</label>
+            <div>
+                <label for="childContact">Child's Contact No:</label>
             </div>
-            <div class="form-group">
+            <div>
                 <label for="nextOfKin">Next of Kin/Details:</label>
             </div>
         </form>
@@ -78,18 +77,14 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <script>
-        // Function to extract query parameters from URL
-        function getQueryParameter(name) {
-            const urlParams = new URLSearchParams(window.location.search);
-            return urlParams.get(name);
-        }
+        // Get the query parameter 'text' from the URL
+        const params = new URLSearchParams(window.location.search);
+        const name = params.get('text');
 
-        // Get the 'text' query parameter from the URL
-        const textParam = getQueryParameter('text');
-
-        // Populate the 'Name' input field with the value of the 'text' parameter
-        if (textParam) {
-            document.getElementById('name').value = textParam;
+        // Check if the 'text' parameter exists and is not empty
+        if (name) {
+            // Display "hello" followed by the name in the 'name' span
+            document.getElementById('name').textContent = name;
         }
     </script>
 
