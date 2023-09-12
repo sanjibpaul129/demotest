@@ -6,6 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Personal Information Form</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Add borders to table cells and headers */
+        table.table-bordered td,
+        table.table-bordered th {
+            border: 1px solid #000;
+        }
+
+        /* Style the table */
+        table.table-bordered {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        /* Style table headers if needed */
+        table.table-bordered th {
+            background-color: #f2f2f2;
+        }
+    </style>
 </head>
 
 <body>
@@ -14,9 +32,9 @@
             <img src="/image/face.jpg" alt="Header Image" class="img-fluid">
         </div><br>
         <form>
-            <table class="table table-bordered table table-striped table-hover">
+            <table class="table table-bordered table table-striped table-hover ">
                 <tbody>
-                    <tr>
+                    <tr class="table-info">
                         <td><label for="name">Name:</label></td>
                         <td><span id="name"></span></td>
                     </tr>
@@ -26,7 +44,8 @@
                     </tr>
                     <tr>
                         <td><label for="address">Address:</label></td>
-                        <td>kolkata,kolkata,west bengal,india,gwdqvcvqvcqv wygvctqgcvcvdwqvcv vdwcqucvdscvwqgfdxrtxy4rxerxrdxyucge</td>
+                        <td>kolkata,kolkata,west bengal,india,gwdqvcvqvcqv wygvctqgcvcvdwqvcv vdwcqucvdscvwqgfdxrtxy4rxerxrdxyucge
+                        </td>
                     </tr>
                     <tr>
                         <td><label for="contactNo">Contact No:</label></td>
@@ -34,8 +53,7 @@
                     </tr>
                     <tr>
                         <td><label for="email">Email Id:</label></td>
-                        <td>sanjibpaul12012000@gmail.com</td>
-                        </td>
+                        <td>john.doe@example.com</td>
                     </tr>
                     <tr>
                         <td><label for="bloodGroup">Blood Group:</label></td>
@@ -43,7 +61,7 @@
                     </tr>
                     <tr>
                         <td><label for="spouseName">Name of Spouse:</label></td>
-                        <td>suhfdueqciu</td>
+                        <td>Jane Doe</td>
                     </tr>
                     <tr>
                         <td><label for="spouseContact">Spouse Contact No:</label></td>
@@ -55,31 +73,31 @@
                     </tr>
                     <tr>
                         <td><label for="livingWith">Living With:</label></td>
-                        <td>tyfug</td>
+                        <td>Family</td>
                     </tr>
                     <tr>
                         <td><label for="medicalHistory">Medical History:</label></td>
-                        <td>jhduwq</td>
+                        <td>None</td>
                     </tr>
                     <tr>
                         <td><label for="allergies">Allergies to Medicines:</label></td>
-                        <td>test demo</td>
+                        <td>None</td>
                     </tr>
                     <tr>
                         <td><label for="allergyPhysician">Allergy Physician (name & No):</label></td>
-                        <td>jkxnnjwcx</td>
+                        <td>Dr. Smith (123-456-7890)</td>
                     </tr>
                     <tr>
                         <td><label for="medicalInsurance">Medical Insurance:</label></td>
-                        <td>demmmmmoooo</td>
+                        <td>XYZ Health Insurance</td>
                     </tr>
                     <tr>
                         <td><label for="childName">Child's Name:</label></td>
-                        <td>test demo</td>
+                        <td>Emily Doe</td>
                     </tr>
                     <tr>
                         <td><label for="childEmail">Child's Email Id:</label></td>
-                        <td>test@gmail.com</td>
+                        <td>emily.doe@example.com</td>
                     </tr>
                     <tr>
                         <td><label for="childContact">Child's Contact No:</label></td>
@@ -87,7 +105,7 @@
                     </tr>
                     <tr>
                         <td><label for="nextOfKin">Next of Kin/Details:</label></td>
-                        <td>uyfuiuyutyf</td>
+                        <td>Next of Kin Details</td>
                     </tr>
                 </tbody>
             </table>
@@ -110,6 +128,6 @@
             document.getElementById('name').textContent = name;
         }
     </script>
-</body>
 
+</body>
 </html>
