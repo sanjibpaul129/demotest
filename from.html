@@ -86,9 +86,23 @@
         </form>
     </div>
 
+
+    <script>
+        // Get the query parameter 'text' from the URL
+        const params = new URLSearchParams(window.location.search);
+        const name = params.get('text');
+
+        // Check if the 'text' parameter exists and is not empty
+        if (name) {
+            // Display "hello" followed by the name in the 'name' span
+            document.getElementById('name').textContent = name;
+        }
+    </script>
+
     <!-- Bootstrap JS and jQuery (you may need to adjust versions) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 </body>
 </html>
