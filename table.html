@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Personal Information Form</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="text-center">
+            <img src="/image/face.jpg" alt="Header Image" class="img-fluid">
+        </div>
+        <form>
+            <table class="table table-bordered">
+                <tbody>
+                    <tr>
+                        <td><label for="name">Name:</label></td>
+                        <td><span id="name"></span></td>
+                    </tr>
+                    <tr>
+                        <td><label for="dob">Date of Birth:</label></td>
+                        <td><input type="date" class="form-control" id="dob" name="dob"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="address">Address:</label></td>
+                        <td><textarea class="form-control" id="address" name="address" rows="4"></textarea></td>
+                    </tr>
+                    <!-- Add other form fields as table rows -->
+                </tbody>
+            </table>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS and jQuery (you may need to adjust versions) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        // Get the query parameter 'text' from the URL
+        const params = new URLSearchParams(window.location.search);
+        const name = params.get('text');
+
+        // Check if the 'text' parameter exists and is not empty
+        if (name) {
+            // Display "hello" followed by the name in the 'name' span
+            document.getElementById('name').textContent = name;
+        }
+    </script>
+</body>
+</html>
